@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Ultimate Quiz</title>
+</head>
+<body>
+    <main class="limit-page-width">
+        <br>
+        <section id="bounding-box">
+            <section id="banner">
+                <button id="begin-quiz" class="in-banner">Begin Quiz</button>
+                <div id="tally-container" class="in-banner">
+                    <span>Correct= </span><span id="correct-answers">0</span>
+                    <span>Incorrect= </span><span id="incorrect-answers">0</span>
+                </div>
+                <span id="timer" class="in-banner time">Time Left</span>
+            </section>
+            <h1 id="quiz-title"></h1>
+            <br>
+            <h2 id="question">Click Begin Quiz above when ready to begin.</h2>
+            <br>
+            <section class="bottom-container">
+                <section id="options-section">
+                    <ol class="options-container">
+                        <div class="option"><button>Choose</button>
+                            <li class="answer" data-number="1"></li>
+                        </div>
+                        <div class="option"><button>Choose</button>
+                            <li class="answer" data-number="2"></li>
+                        </div>
+                        <div class="option"><button>Choose</button>
+                            <li class="answer" data-number="3"></li>
+                        </div>
+                        <div class="option"><button>Choose</button>
+                            <li class="answer" data-number="4"></li>
+                        </div>
+                        <div class="option"><button>Choose</button>
+                            <input id="answer-text" type="text" placeholder="Choose your own adventure..." name="answer-text" />
+                            </li>
+                        </div>
+                    </ol>
+                </section>
+                <section class="answer-sections">
+                    <p id="correct-answer" data-number="1"></p>
+                </section>
+            </section>
+        </section>
+        </main>
+    <footer class="limit-page-width">
+        <h3>Scorecard</h3>
+        <section id="scores">
+            <section id="score-names" class="score-info">
+                <ol>
+                    <h4>Names</h4>
+
+                </ol>
+            </section>
+            <section id="score-corrects" class="score-info">
+                <ul>
+                    <h4>Correct Answers</h4>
+
+                </ul>
+            </section>
+            <section id="score-incorrects" class="score-info">
+                <ul>
+                    <h4>Incorrect Answers</h4>
+
+                </ul>
+            </section>
+        </section>
+    </footer>
+    <audio id="time-running-out" src="./assets/audio/time-running-out.wav"></audio>
+    <audio id="wrong-answer" src="./assets/audio/wrong-answer.wav"></audio>
+    <audio id="right-answer" src="./assets/audio/right-answer.wav"></audio>
+    <audio id="gameover" src="./assets/audio/gameover.wav"></audio>
+    <audio id="finished" src="./assets/audio/finished.wav"></audio>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

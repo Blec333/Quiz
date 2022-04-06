@@ -39,7 +39,7 @@ var htmlObjects = {
 }
 
 //GOBALLY SCOPING THESE
-htmlObjects.quizTitle.textContent = "How many can you answer?"
+htmlObjects.quizTitle.textContent = "How many can you answer?";
 var userName;
 var timerInterval;
 var correct = 0;
@@ -167,7 +167,7 @@ function primaryIterationControl() {
   if (quizStatus === "Inactive") {
     var correct = 0;
     var incorrect = 0;
-    var secondsLeft = 1000;
+    var secondsLeft = 301;
     hasntChosenYet = false;
     setTimer();
     getRandomQuestion();
@@ -275,20 +275,10 @@ function primaryIterationControl() {
 
 //EVENT TO HANDLE CHANGES DURING ITERATION OF QUESTIONS UPON ACTION OF THE NEXT BUTTON
 htmlObjects.beginButton.addEventListener("click", function (event) {
-  event.preventDefault();
   primaryIterationControl();
 }
 );
 
-//ALTERNATIVE EVENT TO HANDLE CHANGES DURING ITERATION OF QUESTIONS UPON ACTION OF THE NEXT BUTTON
-htmlObjects.beginButton.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
-    //enter key was pressed
-    event.preventDefault();
-    document.getElementById('#begin-quiz').click();
-  }
-}
-);
 
 //EVENT TO HANDLE THE USERS CHOICE PER QUESTION
 htmlObjects.options.container.addEventListener("click", function (event) {
